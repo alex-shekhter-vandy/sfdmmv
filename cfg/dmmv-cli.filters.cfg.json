@@ -1,0 +1,85 @@
+{
+  "filters": [
+    {
+      "id": "Standard+DefaultCustom+FinServ",
+      "sobjConds": [
+        {
+          "isForExclude": true,
+          "attr": "APIName",
+          "regexp": [
+            "^AM_Financial",
+            "^Insurance",
+            "^MMD_*",
+            "^User$",
+            "^__Audit__c$",
+            ".*__kav$",
+            ".*__mdt$",
+            "^AAKCS__[^_]+.*__c$",
+            "^MaritzCX__[^_]+.*__c$",
+            "^SBQQ__[^_]+.*__c$",
+            "^copado__[^_]+.*__c$",
+            "^mkto_si__[^_]+.*__c$",
+            "^sbaa__[^_]+.*__c$",
+            "^seismic__[^_]+.*__c$",
+            "^sortablegrid__[^_]+.*__c$"
+          ]
+        },
+        {
+          "attr": "APIName",
+          "regexp": [".+__c$", ".*[^_][^_][^c]$"]
+        }
+      ]
+    },
+    {
+      "id": "TargetObjects",
+      "sobjConds": [
+        {
+          "attr": "APIName",
+          "enum": [
+            "Exception__c",
+            "BatchStatus__c",
+            "Customer_Account_Relation__c",
+            "BatchConditions__c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ListAllObjects",
+      "sobjConds": [
+        {
+          "isForExclude": true,
+          "attr": "APIName",
+          "regexp": [
+            "^Insurance.*",
+            ".*__kav$",
+            ".*__mdt$",
+            "^AAKCS__[^_]+.*__c$",
+            "^MaritzCX__[^_]+.*__c$",
+            "^SBQQ__[^_]+.*__c$",
+            "^copado__[^_]+.*__c$",
+            "^mkto_si__[^_]+.*__c$",
+            "^sbaa__[^_]+.*__c$",
+            "^seismic__[^_]+.*__c$",
+            "^sortablegrid__[^_]+.*__c$"
+          ]
+        },
+        {
+          "attr": "APIName",
+          "regexp": ["^FinServ__", "[^_]+__c$", ".*[^_][^_][^c]$"] 
+        }
+      ]
+    },
+    {
+      "id": "ObjsConnectedPaths",
+      "sobjConds": [
+        {
+          "attr": "APIName",
+          "enum": [
+            "Account", "Case"
+          ]
+        }
+      ]
+    }
+  ]
+}

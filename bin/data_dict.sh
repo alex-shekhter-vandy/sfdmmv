@@ -1,0 +1,16 @@
+#!/bin/bash
+
+(mkdir -p `pwd`/output && rm -f *.xlsx)
+
+CFGDIR=${1:-`pwd`/cfg}
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+$SCRIPTDIR/dmmv-cli \
+    --dmmv:cfg:dir $CFGDIR \
+    -dmmv:cfg:general dmmv-cli.cfg.json \
+    -dmmv:cfg:filters dmmv-cli.filters.cfg.json \
+    -dmmv:cfg:viewers dmmv-cli.views.cfg.json \
+    -dmmv:filter 'ListAllObjects' \
+    -dmmv:viewer default \
+    --dmmv:action data_dict

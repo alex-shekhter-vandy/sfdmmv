@@ -1,0 +1,47 @@
+{
+  "viewers": [
+    {
+      "id": "default",
+      "outputDir": "./output",
+      "dataDictSuffix": "iDMMV-01",
+      "lookupColor": "blue",
+      "masterDetailColor": "crimson",
+      "namespaces": [
+        {
+          "namespace": "c",
+          "color": "black",
+          "bgColor": "bisque",
+          "stdColor": "black",
+          "stdBgColor": "skyblue1"
+        },
+        {
+          "namespace": "FinServ",
+          "color": "black",
+          "bgColor": "aquamarine"
+        },
+        {
+          "namespace": "SBQQ",
+          "color": "blue",
+          "bgColor": "yellow"
+        },
+        {
+          "namespace": "sbaa",
+          "color": "blue",
+          "bgColor": "greenyellow"
+        },
+        {
+          "namespace": "copado",
+          "color": "blue",
+          "bgColor": "lemonchiffon"
+        },
+        {
+          "namespace": "mkto_si",
+          "color": "white",
+          "bgColor": "mediumpurple1"
+        }
+      ],
+      "// fieldsInfo": "Possible values: none; FKs; All",
+      "fieldsInfo": "FKs"
+    }
+  ]
+}
