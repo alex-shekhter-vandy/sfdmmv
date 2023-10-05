@@ -6,6 +6,10 @@ The pupose of this project is to help to provide a tool to:
 2. Generate multiple ERD views of the Salesforce ORG Data Model
 3. Generate Data Dictionaries for the whole model or for segments
 
+### Example of the generated ERD diagram showing all paths between Account and Case SObjects
+
+![All paths from Account to Case](erd_path.png)
+
 ## Bird View
 This is MVP command line implementation of the SFDMMV. It is using the following 3-d party tools:
 1. Salesforce command line client **sfdx**
